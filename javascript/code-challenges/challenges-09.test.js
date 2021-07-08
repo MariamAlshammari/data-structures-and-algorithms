@@ -62,9 +62,16 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 ------------------------------------------------------------------------------------------------ */
 
-const updateNumbers = (obj) =>{}
+const updateNumbers = (obj) =>{
 
   // Solution code here...
+  let newData =[];
+  for (let property in obj)
+  {
+    newData.push(`${property}: ${obj[property]}`)
+  }
+  return newData;
+};
   
 
 
