@@ -8,8 +8,10 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 // Solution code here...
-return arr.map(result => result.length).indexOf(Math.max(...arr.map(result => result.length)))
+let idx=arr.reduce((p1,p2)=>{
+return (p1.length) > (p2.length) ? p1 : p2},'');
 
+return arr.indexOf(idx);
 };
   
 /* ------------------------------------------------------------------------------------------------
@@ -22,7 +24,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
-  return arr.map(result => result.charAt(0));
+  let myArr=arr.map(fLetter => 
+    fLetter.charAt(0));
+    return myArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,7 +39,10 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
-  return arr.filter(result => result.includes(':)'));
+   let res=arr.filter(val => 
+    val.includes(':)')
+    );
+return res;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,7 +55,8 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
-  return arr.map(result => result.substring(1, 4) + result.substring(6, 9) + result.substring(10, 14));
+  return arr.map(str => str.substring(1, 4)+str.substring(6,9)+str.substring(10,15));
+
 
 };
 
@@ -62,7 +70,15 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
-  return str.split('').reduce((acc, val, idx) => (idx % 2 !== 0) ? acc += val : acc, '');
+  let newStr = "";
+  
+  for (let i = 0; i < str.length; i++) {
+
+      if (i % 2 !== 1)
+          continue;
+      newStr += str.charAt(i);
+  }
+  return newStr;
 
 };
 
@@ -74,8 +90,15 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
-  return ((arr.filter(result => !(result.includes(':)'))).length > 0) ? false : true);
+  let res=true;
+  
+  for (let i = 0; i < arr.length; i++) {
 
+      if (arr[i].includes(':)'))
+          continue;
+      res=false
+  }
+  return res;
 };
 
 /* ------------------------------------------------------------------------------------------------
