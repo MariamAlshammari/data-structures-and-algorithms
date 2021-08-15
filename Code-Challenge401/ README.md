@@ -6,7 +6,7 @@ A function that receives an array and returns the elements in reverse
 <!-- Embedded whiteboard image -->
 ### Whiteboard Challenge Workflow
 
-![whiteboard image](/array-reverse/CC1.png)
+![whiteboard-image](Code-Challenge401/array-reverse/CC1.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
